@@ -16,29 +16,8 @@ struct ListNode{
 };
 class Solution {
 public:
-    bool isValid(string s)
-    {
-        stack<char> st;
-        for (auto c : s)
-        {
-            if (c == '(')
-                st.push(')');
-            else if (c == '{')
-                st.push('}');
-            else if (c == '[')
-                st.push(']');
-
-            else if (!st.empty() && c== st.top()){
-                st.pop();
-            }
-            else{
-                return false;
-            }
-        }
-        if (!st.empty()){
-            return false;
-        }
-        return true;
+    int maxArea(vector<int>& height) {
+        
     }
 };
 int main() {
